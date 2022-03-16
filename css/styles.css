@@ -17,6 +17,7 @@ Variables
     --color-gray-light: #617d98;
     --color-gray-lighter: #f1f5f8;
     --color-white:#fff;
+    --color-yellow: #e9b949;
 
     --font-family-primary:"Catamaran", sans-serif;
     --font-family-secondary: "Grand Hotel", cursive;
@@ -27,9 +28,9 @@ Variables
 }
 
 /* 
-==========
-elements reset
-==========
+=================================
+elements reset and global styling
+=================================
 */
 * {
     margin: 0;
@@ -59,7 +60,7 @@ p{
 }
 h1, h2, h3, h4 {
     text-transform: capitalize;
-    list-style: 1.25;
+    line-height: 1.25;
     letter-spacing: var(--spacing);
     margin-bottom: 0.75rem;
 }
@@ -78,4 +79,102 @@ h3{
 
 h4{
     font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+    h1{
+        font-size: 4rem;
+    }
+    
+    h2{
+        font-size: 3rem;
+    }
+    
+    h3{
+        font-size: 2rem;
+    }
+    
+    h4{
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1, h2, h3, h4 {
+        line-height: 1;
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: .75rem 1rem;
+    letter-spacing: var(--spacing);
+    display: inline-block;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transition);
+    box-shadow: 0 1px 3px rgba(0,0,0,.2);
+}
+
+.btn:hover {
+    color: var(--color-primary);
+    background-color: var(--color-primary-light);
+}
+
+/*
+=============
+header
+==============
+*/
+
+.header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,.6)),url('../images/main-bcg.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative; 
+
+    /* animation */
+    overflow: hidden;
+}
+
+.banner {
+    position:absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner h2 {
+    font-family: var(--font-family-secondary);
+    color: var(--color-primary);
+    /* animation */
+}
+
+.banner h1 {
+    text-transform: uppercase;
+    color: var(--color-white);
+    margin-top: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.banner-btn {
+    outline: 0.125rem solid var(--color-primary);
+    outline-offset: 00.25rem;
+    font-size: 1.25rem;
+    padding: 1rem 1.5rem;
+}
+
+.content-divider{
+    height: .5rem;
+    background: linear-gradient(to left, var(--color-primary), var(--color-yellow), var(--color-primary));
 }

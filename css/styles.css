@@ -127,6 +127,12 @@ h4{
     background-color: var(--color-primary-light);
 }
 
+.clearfix::after,
+.clearfix::before{
+    content: "";
+    clear: both;
+    display: table;
+}
 /*
 =============
 header
@@ -177,4 +183,57 @@ header
 .content-divider{
     height: .5rem;
     background: linear-gradient(to left, var(--color-primary), var(--color-yellow), var(--color-primary));
+}
+
+/*
+=============
+skills
+==============
+*/
+
+.skills{
+    background: var(--color-gray-lighter);
+}
+
+.skill {
+    padding: 2.5rem 0;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    transition: var(--transition);
+    display: inline-block;
+    color: var(--color-primary);
+}
+
+.skill-text {
+    color: var(--color-gray-light);
+    max-width: 17rem;
+    margin: 0 auto;
+}
+
+.skill:hover {
+    background: var(--color-white);
+    box-shadow: 0 2px var(--color-primary);
+}
+
+.skill:hover .skill-icon {
+    transform: translateY(-5px);
+}
+
+
+@media screen and (min-width:576px){
+    .skill{
+        float: left;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .skill{
+        width: 25%;
+    }
 }

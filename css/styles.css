@@ -1,5 +1,81 @@
+/*
+============
+Fonts
+===========
+*/
 @import url("https://fonts.googleapis.com/css?family=Catamaran:400,700|Grand+Hotel");
 
+/*
+=============
+Variables
+============= 
+*/
+:root{
+    --color-primary: #678e3e;
+    --color-primary-light: #beed8c;
+    --color-gray-dark: #102842;
+    --color-gray-light: #617d98;
+    --color-gray-lighter: #f1f5f8;
+    --color-white:#fff;
+
+    --font-family-primary:"Catamaran", sans-serif;
+    --font-family-secondary: "Grand Hotel", cursive;
+
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem
+}
+
+/* 
+==========
+elements reset
+==========
+*/
 * {
-    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    background: var(--color-white);
+    color: var(--color-gray-dark);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+p{
+    margin-bottom: 1.25rem;
+}
+h1, h2, h3, h4 {
+    text-transform: capitalize;
+    list-style: 1.25;
+    letter-spacing: var(--spacing);
+    margin-bottom: 0.75rem;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h4{
+    font-size: 0.875rem;
 }

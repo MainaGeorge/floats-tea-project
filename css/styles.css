@@ -111,7 +111,7 @@ h4{
     text-transform: uppercase;
     background: var(--color-primary);
     color: var(--color-white);
-    padding: .75rem 1rem;
+    padding: .375rem .75rem;
     letter-spacing: var(--spacing);
     display: inline-block;
     font-weight: 700;
@@ -120,6 +120,7 @@ h4{
     font-size: 1rem;
     transition: var(--transition);
     box-shadow: 0 1px 3px rgba(0,0,0,.2);
+    font-size: 0.875rem;
 }
 
 .btn:hover {
@@ -132,6 +133,29 @@ h4{
     content: "";
     clear: both;
     display: table;
+}
+
+.section-title h3 {
+    font-family: var(--font-family-secondary);
+    color: var(--color-primary);
+}
+
+.section-title {
+    margin-bottom: 2rem;
+}
+
+.section-center {
+    padding: 4rem 0;
+    width: 85vw;
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+    .section-center {
+        width: 95vh;
+        padding: 2rem 1rem;
+    }
 }
 /*
 =============
@@ -235,5 +259,115 @@ skills
 @media screen and (min-width:1200px){
     .skill{
         width: 25%;
+    }
+}
+
+
+/*
+===================
+About
+===================
+*/
+
+.about-img,
+.about-info {
+    padding: 2rem 0;
+}
+
+.about-picture-container {
+    background: var(--color-primary);
+    border: .5rem solid var(--color-primary);
+    max-width: 30rem;
+    overflow: hidden;
+}
+
+.about-picture {
+    transition: var(--transition);
+}
+
+.about-picture-container:hover .about-picture {
+    opacity: 0.5;
+    transform: scale(1.2);
+}
+
+.about-text {
+    max-width: 26rem;
+    color: var(--color-gray-dark);
+}
+
+@media screen and (min-width: 992px){
+    .about-img,
+    .about-info {
+        float: left;
+        width: 50%;
+    }
+
+    .about-info{
+        padding: 2rem 2rem;
+    }
+}
+
+
+/*
+===================
+Products
+===================
+*/
+
+.products {
+    background: var(--color-gray-lighter);
+}
+
+.product{
+    margin-bottom: 2rem;
+}
+.products article {
+    padding: 2rem 0;
+}
+
+.products-text {
+    color: var(--color-gray-dark);
+    max-width: 26rem;
+}
+
+.product-img {
+    border-radius: var(--radius);
+    margin-bottom: 2rem;
+    height: 17rem;
+    object-fit: cover;
+}
+
+.product-price {
+    color: var(--color-primary);
+}
+
+@media screen and (min-width:768px) {
+    .product {
+        float:left;
+        width: 50%;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .product {
+        width: 33.3%;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .products-info {
+        float: left;
+        width: 30%;
+    }
+
+    .products-inventory {
+        float: left;
+        width: 70%;
+    }
+
+    .product {
+        margin-bottom: 0;
+        padding-right: 1rem;
     }
 }
